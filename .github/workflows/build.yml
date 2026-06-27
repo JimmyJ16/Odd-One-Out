@@ -1,0 +1,20 @@
+name: Build Windows EXE
+on: [push]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    - name: Install PyInstaller
+      run: pip install pyinstaller
+    - name: Build EXE
+      run: pyinstaller --onefile --windowed "Odd One Out.py"
+    - name: Upload EXE Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Windows-Game
+        path: dist/Odd One Out.exe
