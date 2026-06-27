@@ -1,2 +1,2 @@
-Windows: Odd One Out.exe
-Mac: Odd One Out.zip
+## Windows
+https://github.com/JimmyJ16/Odd-One-Out/releases/download/Files/Odd.One.Out.exe
